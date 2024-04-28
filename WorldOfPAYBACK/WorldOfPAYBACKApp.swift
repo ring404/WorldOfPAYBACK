@@ -2,7 +2,7 @@
 //  WorldOfPAYBACKApp.swift
 //  WorldOfPAYBACK
 //
-//  Created by Dmitrii on 26.04.2024.
+//  Created by Dmitrii Priimuk on 26.04.2024.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct WorldOfPAYBACKApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ListOfTransactionsView()
         }
     }
 }

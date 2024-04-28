@@ -8,17 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		DE0E5B4C2BDBB4B900E09EC9 /* WorldOfPAYBACKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E5B4B2BDBB4B900E09EC9 /* WorldOfPAYBACKApp.swift */; };
-		DE0E5B4E2BDBB4B900E09EC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E5B4D2BDBB4B900E09EC9 /* ContentView.swift */; };
+		DE0E5B4E2BDBB4B900E09EC9 /* ListOfTransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E5B4D2BDBB4B900E09EC9 /* ListOfTransactionsView.swift */; };
 		DE0E5B502BDBB4BB00E09EC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE0E5B4F2BDBB4BB00E09EC9 /* Assets.xcassets */; };
 		DE0E5B532BDBB4BB00E09EC9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE0E5B522BDBB4BB00E09EC9 /* Preview Assets.xcassets */; };
+		DE0E5B5C2BDBE5FB00E09EC9 /* Transactions.json in Resources */ = {isa = PBXBuildFile; fileRef = DE0E5B5B2BDBE5FB00E09EC9 /* Transactions.json */; };
+		DE0E5B5E2BDBED0E00E09EC9 /* TransactionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E5B5D2BDBED0E00E09EC9 /* TransactionsModel.swift */; };
+		DE0E5B602BDE5D7800E09EC9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E5B5F2BDE5D7800E09EC9 /* DetailView.swift */; };
+		DE0E5B622BDE5DC300E09EC9 /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E5B612BDE5DC300E09EC9 /* TransactionsViewModel.swift */; };
+		DE0E5B642BDE5E5E00E09EC9 /* FilteredListOfTransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E5B632BDE5E5E00E09EC9 /* FilteredListOfTransactionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DE0E5B482BDBB4B900E09EC9 /* WorldOfPAYBACK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfPAYBACK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE0E5B4B2BDBB4B900E09EC9 /* WorldOfPAYBACKApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPAYBACKApp.swift; sourceTree = "<group>"; };
-		DE0E5B4D2BDBB4B900E09EC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DE0E5B4D2BDBB4B900E09EC9 /* ListOfTransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfTransactionsView.swift; sourceTree = "<group>"; };
 		DE0E5B4F2BDBB4BB00E09EC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE0E5B522BDBB4BB00E09EC9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DE0E5B5B2BDBE5FB00E09EC9 /* Transactions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Transactions.json; sourceTree = "<group>"; };
+		DE0E5B5D2BDBED0E00E09EC9 /* TransactionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsModel.swift; sourceTree = "<group>"; };
+		DE0E5B5F2BDE5D7800E09EC9 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		DE0E5B612BDE5DC300E09EC9 /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
+		DE0E5B632BDE5E5E00E09EC9 /* FilteredListOfTransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredListOfTransactionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +62,10 @@
 			isa = PBXGroup;
 			children = (
 				DE0E5B4B2BDBB4B900E09EC9 /* WorldOfPAYBACKApp.swift */,
-				DE0E5B4D2BDBB4B900E09EC9 /* ContentView.swift */,
+				DE0E5B652BDE5E8B00E09EC9 /* View */,
+				DE0E5B612BDE5DC300E09EC9 /* TransactionsViewModel.swift */,
+				DE0E5B5D2BDBED0E00E09EC9 /* TransactionsModel.swift */,
+				DE0E5B5B2BDBE5FB00E09EC9 /* Transactions.json */,
 				DE0E5B4F2BDBB4BB00E09EC9 /* Assets.xcassets */,
 				DE0E5B512BDBB4BB00E09EC9 /* Preview Content */,
 			);
@@ -65,6 +78,16 @@
 				DE0E5B522BDBB4BB00E09EC9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DE0E5B652BDE5E8B00E09EC9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE0E5B4D2BDBB4B900E09EC9 /* ListOfTransactionsView.swift */,
+				DE0E5B632BDE5E5E00E09EC9 /* FilteredListOfTransactionsView.swift */,
+				DE0E5B5F2BDE5D7800E09EC9 /* DetailView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE0E5B532BDBB4BB00E09EC9 /* Preview Assets.xcassets in Resources */,
+				DE0E5B5C2BDBE5FB00E09EC9 /* Transactions.json in Resources */,
 				DE0E5B502BDBB4BB00E09EC9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,7 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE0E5B4E2BDBB4B900E09EC9 /* ContentView.swift in Sources */,
+				DE0E5B4E2BDBB4B900E09EC9 /* ListOfTransactionsView.swift in Sources */,
+				DE0E5B622BDE5DC300E09EC9 /* TransactionsViewModel.swift in Sources */,
+				DE0E5B602BDE5D7800E09EC9 /* DetailView.swift in Sources */,
+				DE0E5B642BDE5E5E00E09EC9 /* FilteredListOfTransactionsView.swift in Sources */,
+				DE0E5B5E2BDBED0E00E09EC9 /* TransactionsModel.swift in Sources */,
 				DE0E5B4C2BDBB4B900E09EC9 /* WorldOfPAYBACKApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,7 +300,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorldOfPAYBACK/Preview Content\"";
-				DEVELOPMENT_TEAM = 9ZBR4PY2ZY;
+				DEVELOPMENT_TEAM = K75VWLJS7A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -301,7 +329,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorldOfPAYBACK/Preview Content\"";
-				DEVELOPMENT_TEAM = 9ZBR4PY2ZY;
+				DEVELOPMENT_TEAM = K75VWLJS7A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
