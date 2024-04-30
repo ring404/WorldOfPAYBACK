@@ -16,6 +16,7 @@ struct DetailView: View {
             Text("Partner: \(transaction.partnerDisplayName)")
             Text("Description: \(transaction.transactionDetail.description ?? "not found")")
         }
+        .font(.title)
         .padding()
     }
 }

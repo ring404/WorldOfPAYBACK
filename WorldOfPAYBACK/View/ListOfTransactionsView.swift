@@ -10,7 +10,14 @@ import SwiftUI
 struct ListOfTransactionsView: View {
     @ObservedObject var viewModel = TransactionsViewModel()
     @State private var selectedCategory: Int = 0
-
+    var filteredTransactions: [TransactionItem] {
+        if selectedCategory == 0 {
+            return viewModel.transactions
+        } else {
+            return viewModel.transactions.filter { $0.category == selectedCategory }
+        }
+    }
+    
     var body: some View {
         NavigationView {
             if let errorMessage = viewModel.errorMessage {
@@ -29,23 +36,12 @@ struct ListOfTransactionsView: View {
                     }
                     .pickerStyle(SegmentedPickerStyle())
                     .padding()
-                    FilteredListOfTransactionsView(transactions: filteredTransactions)
+                    FilteredListOfTransactionsView(transactions: filteredTransactions, selectedCategory: selectedCategory)
                         .navigationBarTitle("Transactions")
                 }
-                
-               
             }
         }
     }
-
-    var filteredTransactions: [TransactionItem] {
-        if selectedCategory == 0 {
-            return viewModel.transactions
-        } else {
-            return viewModel.transactions.filter { $0.category == selectedCategory }
-        }
-    }
-    
 }
 
 extension Array where Element: Hashable {
@@ -62,8 +58,4 @@ extension Array where Element: Numeric {
         newArray.insert(0, at: 0)
         return newArray
     }
-}
-
-#Preview {
-    ListOfTransactionsView()
 }

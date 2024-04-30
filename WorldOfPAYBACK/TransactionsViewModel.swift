@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-class TransactionsViewModel: ObservableObject {
+final class TransactionsViewModel: ObservableObject {
     @Published var transactions: [TransactionItem] = []
     @Published var errorMessage: String?
     
@@ -31,7 +31,6 @@ class TransactionsViewModel: ObservableObject {
             transactions = result.items.sorted(by: { $0.transactionDetail.bookingDate < $1.transactionDetail.bookingDate })
         } catch {
             print("Error decoding JSON: \(error)")
-           
         }
     }
 }

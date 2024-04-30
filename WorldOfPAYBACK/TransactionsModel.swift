@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Transactions: Codable {
+struct Transactions: Decodable {
     let items: [TransactionItem]
 }
 
-struct TransactionItem: Codable, Identifiable {
+struct TransactionItem: Decodable, Identifiable {
     var id: String {
         alias.reference
     }
@@ -22,17 +22,17 @@ struct TransactionItem: Codable, Identifiable {
     let transactionDetail: TransactionDetail
 }
 
-struct Alias: Codable {
+struct Alias: Decodable {
     let reference: String
 }
 
-struct TransactionDetail: Codable {
+struct TransactionDetail: Decodable {
     let description: String?
     let bookingDate: Date
     let value: Value
 }
 
-struct Value: Codable {
+struct Value: Decodable {
     let amount: Int
     let currency: String
 }
